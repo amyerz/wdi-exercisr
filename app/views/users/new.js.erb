@@ -1,5 +1,3 @@
-alert('Response achieved from a request to "/users/new" as JS.');
+var signup_window = $("#signup_window");
 
-alert("I'm about to hide the body.");
-
-$("body").hide();
+signup_window.html("<%= j render 'form' %>");

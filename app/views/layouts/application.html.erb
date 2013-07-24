@@ -38,13 +38,15 @@
             <li><%= link_to "Logout", :logout %></li>
           <% else %>
             <li><%= link_to "Register", new_user_path %></li>
-            <li><%= link_to "Register (AJAX)", new_user_path, :remote => true %></li>
+            <li><%= link_to "Register (AJAX)", new_user_path, :remote => true, :data => {"reveal-id" => "signup_window"} %></li>
             <li class="divider"></li>
             <li><%= link_to "Login", :login %></li>
           <% end %>
         </ul>
       </div>
     </nav>
+
+    <div id="signup_window" class="reveal-modal"></div>
 
     <% if !notice.blank? || !alert.blank? %>
       <div class="row">
