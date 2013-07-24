@@ -39,10 +39,7 @@ We'll build user signup with AJAX together.
 
 (The dropdown menu you're adding shouldn't do anything yet. It should just exist.)
 
-**Pause**
+**Homework**
 
-Together, we'll add an AJAX call to get exercise data related to the selected activity.
-
-**Unpause**
-
-9. Write code for the 'done' callback that adds a Morris JS chart to the page using the exercise data for the selected activity.
+1. Add an AJAX call to get exercise data related to the selected activity.
+2. Write code for the 'done' callback that adds a Morris JS chart to the page using the exercise data for the selected activity.
