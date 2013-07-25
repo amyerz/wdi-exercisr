@@ -14,8 +14,8 @@
   = @exercise.completed
 %p
   %b User:
-  = @exercise.user
+  = @exercise.user.email
 
-= link_to 'Edit', edit_exercise_path(@exercise)
+= link_to 'Edit', edit_user_exercise_path(:user_id => @user.id, :id => @exercise.id)
 \|
-= link_to 'Back', exercises_path
+= link_to 'Back', user_exercises_path(:user_id => @user.id)

@@ -1,7 +1,7 @@
 %h1 Listing exercises
 %br
-  = link_to 'New Exercise', new_user_exercise_path
-  
+  = link_to 'New Exercise', new_user_exercise_path, :remote => true, :data => {"reveal-id" => "add_exercise_window"}
+
 %table
   %tr
     %th Activity
