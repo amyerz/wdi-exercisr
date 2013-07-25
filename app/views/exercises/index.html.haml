@@ -1,5 +1,7 @@
 %h1 Listing exercises
-
+%br
+  = link_to 'New Exercise', new_user_exercise_path
+  
 %table
   %tr
     %th Activity
@@ -17,11 +19,11 @@
       %td= exercise.value
       %td= exercise.units
       %td= exercise.completed
-      %td= exercise.user
-      %td= link_to 'Show', exercise
-      %td= link_to 'Edit', edit_exercise_path(exercise)
-      %td= link_to 'Destroy', exercise, method: :delete, data: { confirm: 'Are you sure?' }
+      %td= exercise.user.email
+      %td= link_to 'Show', user_exercise_path(:user_id => @user.id, :id => exercise.id)
+      %td= link_to 'Edit', edit_user_exercise_path(:user_id => @user.id, :id => exercise.id)
+      %td= link_to 'Destroy', user_exercise_path(:user_id => @user.id, :id => exercise.id), method: :delete, data: { confirm: 'Are you sure?' }
 
-%br
 
-= link_to 'New Exercise', new_exercise_path
+
+

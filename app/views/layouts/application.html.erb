@@ -35,18 +35,23 @@
           <% if current_user %>
             <li><%= link_to "Edit Profile", edit_user_path(current_user.id) %></li>
             <li class="divider"></li>
+            <li><%= link_to "Exercise Log", user_exercises_path(:user_id => current_user.id) %></li>
+            <li class="divider"></li>
             <li><%= link_to "Logout", :logout %></li>
           <% else %>
             <li><%= link_to "Register", new_user_path %></li>
             <li><%= link_to "Register (AJAX)", new_user_path, :remote => true, :data => {"reveal-id" => "signup_window"} %></li>
             <li class="divider"></li>
             <li><%= link_to "Login", :login %></li>
+            <li><%= link_to "Login (AJAX)", :login , :remote => true, :data => {"reveal-id" => "login_window"}%></li>
           <% end %>
         </ul>
       </div>
     </nav>
 
     <div id="signup_window" class="reveal-modal"></div>
+    <div id="login_window" class="reveal-modal"></div>
+
 
     <% if !notice.blank? || !alert.blank? %>
       <div class="row">
