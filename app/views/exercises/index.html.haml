@@ -2,6 +2,10 @@
 %br
   = link_to 'New Exercise', new_user_exercise_path, :remote => true, :data => {"reveal-id" => "add_exercise_window"}
 
+%select{:name => 'activity'}
+  - @activities.each do |activity|
+    %option{}= activity
+
 %table
   %tr
     %th Activity
